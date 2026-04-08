@@ -1,0 +1,54 @@
+@import "tailwindcss";
+
+@theme {
+  /* Brand Colors */
+  --color-gold-50: #fdf8ef;
+  --color-gold-100: #faefd9;
+  --color-gold-200: #f4dba5;
+  --color-gold-300: #edc36d;
+  --color-gold-400: #e5a83d;
+  --color-gold-500: #d4891e;
+  --color-gold-600: #b86e17;
+  --color-gold-700: #8f5113;
+  --color-gold-800: #6e3e14;
+  --color-gold-900: #5a3414;
+
+  --color-rose-brand: #c4776a;
+  --color-charcoal: #2d2d2d;
+
+  /* Fonts */
+  --font-assistant: var(--font-assistant), sans-serif;
+  --font-frank: var(--font-frank), serif;
+
+  /* Spacing */
+  --spacing-section: 5rem;
+}
+
+/* Base RTL styles */
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-assistant);
+  direction: rtl;
+  text-align: right;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-frank);
+  font-weight: 700;
+}
+
+/* Gold button base */
+.btn-gold {
+  @apply bg-gold-500 text-white font-semibold px-6 py-3 rounded-lg transition-colors hover:bg-gold-600 active:bg-gold-700;
+}
+
+.btn-outline {
+  @apply border-2 border-gold-500 text-gold-600 font-semibold px-6 py-3 rounded-lg transition-colors hover:bg-gold-50;
+}
